@@ -34,7 +34,7 @@ export default function Home() {
 					rel="stylesheet"
 				/>
 			</Head>
-			<div>temp
+			<div>temperory
 				<nav>
 					Hello
 					<a className="btn">asdadasdas</a>
