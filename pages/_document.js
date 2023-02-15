@@ -11,6 +11,7 @@ const Document = () => {
 					href="../bootstrap/images/PNG.png"
 					sizes="192x192"
 				/>
+			
 			</Head>
 			<body>
 				<Main />
