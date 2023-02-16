@@ -98,7 +98,7 @@ const Login = () => {
 			</section>
 		);
 	} else {
-		window.location.href = "/upload";
+		window.location.href = "/";
 	}
 };
 
