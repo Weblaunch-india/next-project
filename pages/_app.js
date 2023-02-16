@@ -6,6 +6,7 @@ import "../bootstrap/boxicons/css/boxicons.min.css";
 import "../bootstrap/css/style.css";
 import { Navbar } from "../components/Navbar";
 import Footer from "../components/Footer";
+import $ from 'jquery'
 
 function MyApp({ Component, pageProps }) {
 	return <>
