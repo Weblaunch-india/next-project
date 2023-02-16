@@ -1,4 +1,4 @@
-import { getDocs } from "firebase/firestore";
+import { deleteDoc, getDocs } from "firebase/firestore";
 import {
 	getDownloadURL,
 	getStorage,
@@ -7,7 +7,13 @@ import {
 	uploadBytesResumable,
 } from "firebase/storage";
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, addDoc } from "firebase/firestore";
+import {
+	doc,
+	getFirestore,
+	collection,
+	addDoc,
+	updateDoc,
+} from "firebase/firestore";
 
 const firebaseConfig = {
 	apiKey: "AIzaSyAHR67C4H_51mUc1QdAztY1uLBzRlh4Pcs",
@@ -92,14 +98,26 @@ export async function createEvent(e, title, subtitle, description, url) {
 	console.log("Document written with ID: ", docRef.id);
 }
 
-function updateEvent() {}
+export async function updateEvent(id, fields) {
+	const docRef = doc(db, "events", id);
 
-function deleteEvent() {}
+	await updateDoc(docRef, fields);
+}
 
-async function getEvents(setEvents) {
+export async function deleteEvent(id) {
+	// import { doc, deleteDoc } from "firebase/firestore";
+
+	await deleteDoc(doc(db, "events", id));
+	console.log("deleted bro");
+}
+
+export async function getEvents(setEvents) {
 	const querySnapshot = await getDocs(collection(db, "events"));
-	querySnapshot.forEach((doc) => {
+
+	const result = querySnapshot.forEach((doc) => {
 		// doc.data() is never undefined for query doc snapshots
-		setEvents((prev) => [...prev, doc.data()]);
+		console.log(doc.data());
+		setEvents((prev) => [...prev, { id: doc.id, ...doc.data() }]);
 	});
+	return result;
 }

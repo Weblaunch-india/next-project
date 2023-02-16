@@ -1,0 +1,34 @@
+/* @import url('add.css'); */
+/* @import url('index.css'); */
+/* @import url('style.css'); */
+
+
+.services {
+    padding-bottom: 2rem;
+    padding-top: 3rem;
+}
+
+.icon-box {}
+
+
+@media screen and (min-width: 768px) {
+    .icon-box {
+        height: 300px !important;
+    }
+    .img-fluid {
+        border-radius: 50%;
+    }
+    .row {
+        text-align: center !important;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .services {
+        padding-top: 1rem;
+    }
+    .carousel-cell {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+}
