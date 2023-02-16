@@ -1,3 +1,4 @@
+import { getDocs } from "firebase/firestore";
 import {
 	getDownloadURL,
 	getStorage,
@@ -26,7 +27,7 @@ export const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 // Create a root reference
 
-export function uploadImage(file, title , setURL) {
+export function uploadImage(file, title, setURL) {
 	const storageRef = ref(storage, `events/${title}`);
 
 	const uploadTask = uploadBytesResumable(storageRef, file);
@@ -78,7 +79,7 @@ export function uploadImage(file, title , setURL) {
 
 const storage = getStorage(app);
 
-export async function createEvent(e , title, subtitle, description, url) {
+export async function createEvent(e, title, subtitle, description, url) {
 	// Create a root reference
 
 	const docRef = await addDoc(collection(db, "events"), {
@@ -95,4 +96,10 @@ function updateEvent() {}
 
 function deleteEvent() {}
 
-function getEvents() {}
+async function getEvents(setEvents) {
+	const querySnapshot = await getDocs(collection(db, "events"));
+	querySnapshot.forEach((doc) => {
+		// doc.data() is never undefined for query doc snapshots
+		setEvents((prev) => [...prev, doc.data()]);
+	});
+}
