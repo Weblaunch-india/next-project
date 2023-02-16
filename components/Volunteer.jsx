@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import vol from '../bootstrap/images/1.png'
 
 export const Volunteer = () => {
   return (
@@ -188,7 +189,7 @@ export const Volunteer = () => {
           <p><strong> To join us <Link href="https://forms.gle/rwVwqFbY5VwLb1Zi8" className="btn btn-primary">Click here!</Link></strong></p>
         </div>
         <div className="col-lg-4 " data-aos="fade-up" >
-          <Image fill src="/../bootstrap/images/1.png" className="img-fluid" alt="joinUs" />
+          <Image width={200} height={200} src={vol} className="img-fluid" alt="joinUs" />
       </div>
       </div>
     </div>
