@@ -12,6 +12,9 @@ import Gallery9 from '../bootstrap/images/gallery/9.jpg'
 import $ from 'jquery'
 
 export const Gallery = () => {
+    const styling = {
+        "padding-top": "60px"
+    }
   return (
     <div>
         
@@ -21,7 +24,7 @@ export const Gallery = () => {
     }
 </style> */}
 
-<section id="portfolio" class="portfolio">
+<section id="portfolio" class="portfolio" style={styling}>
 
     <div class="container" >
        <div class="section-title">
