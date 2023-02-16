@@ -1,6 +1,11 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import team_mem_1 from '../bootstrap/images/team/Yadaiah.jpg'
+import team_mem_2 from '../bootstrap/images/team/padmarao.jpg'
+import team_mem_3 from '../bootstrap/images/team/K.Sathyanarayana.jpg'
+import team_mem_4 from '../bootstrap/images/team/K.Saroja.jpg'
+import team_mem_5 from '../bootstrap/images/team/B.venkatesham.jpg'
 
 const About = () => {
   return (
@@ -150,7 +155,7 @@ const About = () => {
           <div className=" container-fluid">
               <div className="">
                 <div className="">
-                  <Image src="/../bootstrap/images/team/Yadaiah.jpg" alt="Kuwarjeet Singh" className='img-fluid' width="300" height="350" />
+                  <Image src={team_mem_1} alt="Kuwarjeet Singh" className='img-fluid' width="300" height="350" />
                   <h4 className="about-name">K.Yadaiah</h4>
                   <h6>President</h6>
                 </div>
@@ -162,7 +167,7 @@ const About = () => {
           <div className=" container-fluid">
               <div className="">
                 <div className="">
-                  <Image src="/../bootstrap/images/team/padmarao.jpg" className='img-fluid' alt="Harman arora" width="300" height="350" />
+                  <Image src={team_mem_2} className='img-fluid' alt="Harman arora" width="300" height="350" />
                   <h4 className="about-name">Padma Rao Mekala</h4>
                   <h6>Vice President</h6>
                 </div>
@@ -175,7 +180,7 @@ const About = () => {
         <div className=" container-fluid">
             <div className="">
               <div className="">
-                <Image src="/../bootstrap/images/team/K.Sathyanarayana.jpg" className='img-fluid' alt="Avleen Kaur" width="300" height="350" />
+                <Image src={team_mem_3} className='img-fluid' alt="Avleen Kaur" width="300" height="350" />
                 <h4 className="about-name">Sathyanarayana Kandi</h4>
                 <h6>General Secretary</h6>
               </div>
@@ -188,7 +193,7 @@ const About = () => {
           <div className=" container-fluid">
               <div className="">
                 <div className="">
-                  <Image src="/../bootstrap/images/team/K.Saroja.jpg" className='img-fluid' alt="Yashvi parwani" width="300" height="350" />
+                  <Image src={team_mem_4} className='img-fluid' alt="Yashvi parwani" width="300" height="350" />
                   <h4 className="about-name">Sarojana Kuntolla</h4>
                   <h6>Treasurer</h6>
                 </div>
@@ -201,7 +206,7 @@ const About = () => {
           <div className=" container-fluid">
               <div className="">
                 <div className="">
-                  <Image src="/../bootstrap/images/team/B.venkatesham.jpg" className='img-fluid'alt="Bineet Singh" width="300" height="350" />
+                  <Image src={team_mem_5} className='img-fluid'alt="Bineet Singh" width="300" height="350" />
                   <h4 className="about-name">Venkatesham Battula</h4>
                   <h6>Joint Secretary</h6>
                 </div>

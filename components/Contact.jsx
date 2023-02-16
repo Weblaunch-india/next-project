@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import contactCartoon from '../bootstrap/images/2.jpg'
 
 export const Contact = () => {
   return (
@@ -28,7 +29,7 @@ export const Contact = () => {
                     </div>
             </div>
             <div class="col-sm-5  col-md-6 offset-md-0 contact contact-img" data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-delay="100">
-                <Image width="500" height="500" style={{"margin-top": "12%"}} src="/../bootstrap/images/2.jpg" alt="" />
+                <Image width="500" height="500" style={{"margin-top": "12%"}} src={contactCartoon} alt="" />
             </div>
         </div>
     </div>

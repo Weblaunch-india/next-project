@@ -2,8 +2,16 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import logo from "../bootstrap/images/PNG.png"
+import Script from 'next/script'
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import $ from 'jquery';
 
 const Footer = () => {
+    useEffect(() => {
+        AOS.init();
+      }, []);
   return (
     <div>
         <footer id="footer">
@@ -46,9 +54,22 @@ const Footer = () => {
       <hr />
       <p className="copyright">All Rights Reserved by <strong>Spoorthy Organization © 2023</strong>. Designed and developed by Weblaunch. <Link href="https://weblaunch.in/" target="_blank">Weblaunch</Link></p>
 </footer>
+
+<Script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+  crossOrigin="anonymous" async></Script>
+<Script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+  crossOrigin="anonymous" async></Script>
+<Script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+  integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+  crossOrigin="anonymous" async></Script>
+
+
 {/* <!--aos js link--> */}
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js" async></script>    
-<script>AOS.init();</script>
+<Script src="https://unpkg.com/aos@2.3.1/dist/aos.js" async></Script>    
+{/* <script>AOS.init();</script>
+ */}
     </div>
   )
 }

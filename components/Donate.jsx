@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import qrCode from '../bootstrap/images/donation_images/phon.jpg'
 
 const Donate = () => {
   return (
@@ -88,7 +89,7 @@ const Donate = () => {
             
             <div class="col border-right pay-don" data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-delay="200">
                 <p style={{"text-decoration": "underline", "font-weight": "bold", "font-size": "larger"}} class="pay-img">Scan this to pay via PhonePe</p>
-                <Image src="/../bootstrap/images/donation_images/phon.jpg" class="pr-5 pay-img" alt="paytm Qr code" width="450" height="300" />
+                <Image src={qrCode} class="pr-5 pay-img" alt="paytm Qr code" width="450" height="300" />
             </div>
         </div>
         

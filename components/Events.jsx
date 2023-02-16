@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import event1 from '../bootstrap/images/gallery/7.jpg'
 
 export const Events = () => {
   return (
@@ -15,7 +16,7 @@ export const Events = () => {
         <div className="row justify-content-start">
             <div className="col-md-5" data-aos="fade-up"
             data-aos-anchor-placement="center-bottom">
-                <Image fill src="/../bootstrap/images/gallery/7.jpg" className="img-fluid" alt="EVENT IMAGE" />
+                <Image fill src={event1} className="img-fluid" alt="EVENT IMAGE" />
             </div>
             <div className="col-md-7 pt-4" data-aos="fade-left">
                 <h2>Career Guidance for Children</h2>
