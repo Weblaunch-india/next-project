@@ -6,14 +6,13 @@ import Link from "next/link";
 export default function Home() {
 	return (
 		<div className="">
-			
 			<div id="header">
 	  <div className="container text-center">
 		<div className="header-box">
 			<h1><span>S</span>poorthy <span>O</span>rganization</h1>
 		</div>
 	 </div>
-</div>
+  </div>
 {/* <!---------------------------------------- jumbotron ----------------------------------------> */}
 <div className="container-fluid" >
 <div className="row jumbotron" style={{"margin": 0}}>
