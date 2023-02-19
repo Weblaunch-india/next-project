@@ -2,7 +2,6 @@ import React from "react";
 import logo from "../bootstrap/images/PNG.png";
 import Image from "next/image";
 import Head from "next/head";
-import Link from "next/link";
 import { Logout, auth } from "../functions";
 import { useAuthState } from "react-firebase-hooks/auth";
 import Link from 'next/link';
