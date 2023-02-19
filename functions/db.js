@@ -33,8 +33,8 @@ export const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 // Create a root reference
 
-export function uploadImage(file, title, setURL) {
-	const storageRef = ref(storage, `events/${title}`);
+export function uploadImage(file, title, setURL, folder) {
+	const storageRef = ref(storage, `${folder}/${title}`);
 
 	const uploadTask = uploadBytesResumable(storageRef, file);
 	// Register three observers:
@@ -73,7 +73,7 @@ export function uploadImage(file, title, setURL) {
 						"File available at",
 						downloadURL
 					);
-
+					
 					setURL(downloadURL);
 				}
 			);
@@ -124,24 +124,14 @@ export async function getEvents(setEvents) {
 
 //
 
-
-export async function createImage(e, title, subtitle, description, url) {
+export async function createImage(e, url) {
 	// Create a root reference
 
-	const docRef = await addDoc(collection(db, "events"), {
-		title: "asdadas",
-		subtitle: "asdads",
-		description: "Swqwdasq",
+	const docRef = await addDoc(collection(db, "gallery"), {
 		image: url,
 	});
 
 	console.log("Document written with ID: ", docRef.id);
-}
-
-export async function updateImage(id, fields) {
-	const docRef = doc(db, "events", id);
-
-	await updateDoc(docRef, fields);
 }
 
 export async function deleteImage(id) {

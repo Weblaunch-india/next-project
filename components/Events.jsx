@@ -41,7 +41,7 @@ export const Events = () => {
 							href="/events-edit"
 							role="button"
 						>
-							Add Event
+							Add Events
 						</Link>
 					</div>
 				</div>

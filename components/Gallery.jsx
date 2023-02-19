@@ -19,7 +19,7 @@ export const Gallery = () => {
 		"padding-top": "60px",
 	};
 
-	const [setImage, setImages] = useState([]);
+	const [Images, setImages] = useState([]);
 
 	useEffect(() => {
 		setImages((prev) => [...prev, getImages(setImages)]);
@@ -50,166 +50,38 @@ export const Gallery = () => {
 					{loading ? (
 						<div>Loading...</div>
 					) : user ? (
-						<div>
-							<div class="admin-section">
-								<Link
-									class="btn btn-primary admin-button"
-									href="/images-edit"
-									role="button"
-								>
-									Add
-									Event
-								</Link>
-							</div>
+						<div className="admin-section">
+							<Link
+								className="btn btn-primary admin-button"
+								href="{{ url_for('add_gallery_image') }}"
+								role="button"
+							>
+								Add image
+							</Link>
 						</div>
 					) : (
 						<></>
 					)}
 					<div className="row portfolio-container">
-						<div className="col-lg-4 col-md-6 portfolio-item filter-app">
-							<div
-								className="portfolio-wrap"
-								data-aos="fade-left"
-								data-aos-easing="ease-in-sine"
-								data-aos-delay="100"
-							>
-								<Image
-									fill
-									alt=""
-									src={
-										Gallery1
-									}
-									className="img-fluid"
-								/>
-							</div>
-						</div>
-
-						<div className="col-lg-4 col-md-6 portfolio-item filter-app">
-							<div
-								className="portfolio-wrap"
-								data-aos="fade-left"
-								data-aos-easing="ease-in-sine"
-								data-aos-delay="100"
-							>
-								<Image
-									fill
-									alt=""
-									src={
-										Gallery2
-									}
-									className="img-fluid"
-								/>
-							</div>
-						</div>
-
-						<div className="col-lg-4 col-md-6 portfolio-item filter-app">
-							<div
-								className="portfolio-wrap"
-								data-aos="fade-left"
-								data-aos-easing="ease-in-sine"
-								data-aos-delay="100"
-							>
-								<Image
-									fill
-									alt=""
-									src={
-										Gallery3
-									}
-									className="img-fluid"
-								/>
-							</div>
-						</div>
-
-						<div className="col-lg-4 col-md-6 portfolio-item filter-app">
-							<div
-								className="portfolio-wrap"
-								data-aos="fade-left"
-								data-aos-easing="ease-in-sine"
-								data-aos-delay="100"
-							>
-								<Image
-									fill
-									alt=""
-									src={
-										Gallery4
-									}
-									className="img-fluid"
-								/>
-							</div>
-						</div>
-
-						<div className="col-lg-4 col-md-6 portfolio-item filter-app">
-							<div
-								className="portfolio-wrap"
-								data-aos="fade-left"
-								data-aos-easing="ease-in-sine"
-								data-aos-delay="100"
-							>
-								<Image
-									fill
-									alt=""
-									src={
-										Gallery5
-									}
-									className="img-fluid"
-								/>
-							</div>
-						</div>
-
-						<div className="col-lg-4 col-md-6 portfolio-item filter-app">
-							<div
-								className="portfolio-wrap"
-								data-aos="fade-left"
-								data-aos-easing="ease-in-sine"
-								data-aos-delay="100"
-							>
-								<Image
-									fill
-									alt=""
-									src={
-										Gallery6
-									}
-									className="img-fluid"
-								/>
-							</div>
-						</div>
-
-						<div className="col-lg-4 col-md-6 portfolio-item filter-app">
-							<div
-								className="portfolio-wrap"
-								data-aos="fade-left"
-								data-aos-easing="ease-in-sine"
-								data-aos-delay="100"
-							>
-								<Image
-									fill
-									alt=""
-									src={
-										Gallery7
-									}
-									className="img-fluid"
-								/>
-							</div>
-						</div>
-
-						<div className="col-lg-4 col-md-6 portfolio-item filter-app">
-							<div
-								className="portfolio-wrap"
-								data-aos="fade-left"
-								data-aos-easing="ease-in-sine"
-								data-aos-delay="100"
-							>
-								<Image
-									fill
-									alt=""
-									src={
-										Gallery8
-									}
-									className="img-fluid"
-								/>
-							</div>
-						</div>
-
+						{Images.map((elem) => {
+							return (<div key={elem.image} className="col-lg-4 col-md-6 portfolio-item filter-app">
+								<div
+									className="portfolio-wrap"
+									data-aos="fade-left"
+									data-aos-easing="ease-in-sine"
+									data-aos-delay="100"
+								>
+									<img
+										fill
+										alt=""
+										src={
+											elem.image
+										}
+										className="img-fluid"
+									/>
+								</div>
+							</div>)
+						})}
 						{/* <div className="col-lg-4 col-md-6 portfolio-item filter-app">
                 <div className="portfolio-wrap" data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-delay="100">
                     <Image fill alt='' src={Gallery9} className="img-fluid" />
