@@ -149,6 +149,17 @@ a:hover {
   background-color: #009970;
   color: #fff;
 }
+
+.about-service {
+  padding-bottom: 2rem !important;
+  padding-top: 3rem !important;
+}
+@media screen and (max-width:768px) {
+  .about-service {
+    padding-top: 1rem !important;
+  }
+}
+
 /*Below We teach them.....(Cards) End*/
 
 /*Portfolio Section Starts || Same CSS use for Education @TRPWS*/
@@ -385,4 +396,27 @@ a:hover {
 }
 /*Testimonial ends*/
 
+@media screen and (min-width: 768px) {
+  .icon-title {
+    height: 300px !important;
+  }
+}
+
 /* Home page CSS End*/
+@media screen and (min-width:768px) {
+  .team-pic {
+    border-radius: 50% !important;
+  }
+  .team-row {
+    text-align: center !important;
+  }
+  .about-carousel-cell {
+    margin: 1rem 0;
+  }
+}
+@media screen and (max-width:768px) {
+  .about-carousel-cell {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+}

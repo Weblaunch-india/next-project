@@ -42,7 +42,7 @@ export const Home = () => {
         </p>
     </div>
     <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2 text-center">
-        <Link href="aboutus.html"><button type="button" className="btn btn-lg border border-secondary read-more">Know More</button></Link>
+        <Link href="/about"><button type="button" className="btn btn-lg border border-secondary read-more">Know More</button></Link>
     </div>
 </div>
 </div>
@@ -109,7 +109,7 @@ export const Home = () => {
         <div className="row portfolio-container">
           <div className="col-lg-4 col-md-6 portfolio-item filter-app">
             <div className="portfolio-wrap" data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-delay="100">
-              <Image fill src={education1} alt="" className="img-fluid" />
+              <Image height={400} width={400} src={education1} alt="" className="img-fluid" />
               <div className="portfolio-info">
                 <h4>WE LOVE</h4>
               </div>
@@ -118,7 +118,7 @@ export const Home = () => {
 
           <div className="col-lg-4 col-md-6 portfolio-item filter-web">
             <div className="portfolio-wrap" data-aos="zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="100">
-              <Image fill src={education2} alt="" className="img-fluid" />
+              <Image height={400} width={400} src={education2} alt="" className="img-fluid" />
               <div className="portfolio-info">
                 <h4>WE CARE</h4>
               </div>
@@ -127,7 +127,7 @@ export const Home = () => {
 
           <div className="col-lg-4 col-md-6 portfolio-item filter-app">
             <div className="portfolio-wrap" data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-delay="100">
-              <Image fill src={education3} alt="" className="img-fluid" />
+              <Image height={400} width={400} src={education3} alt="" className="img-fluid" />
               <div className="portfolio-info">
                 <h4>WE TEACH</h4>
               </div>
@@ -148,40 +148,39 @@ export const Home = () => {
         <div className="row portfolio-container">
           <div className="col-lg-4 col-md-6 portfolio-item filter-app">
             <div className="portfolio-wrap" data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-delay="100">
-              <Image alt="" fill src={gallery1} className="img-fluid" />
+              <Image alt="" height={400} width={400} src={gallery1} className="img-fluid" />
             </div>
           </div>
 
           <div className="col-lg-4 col-md-6 portfolio-item filter-web">
             <div className="portfolio-wrap" data-aos="zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="100">
-              <Image alt="" fill src={gallery2} className="img-fluid" />
+              <Image alt="" height={400} width={400} src={gallery2} className="img-fluid" />
             </div>
           </div>
 
           <div className="col-lg-4 col-md-6 portfolio-item filter-app">
             <div className="portfolio-wrap" data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-delay="100">
-              <Image alt="" fill src={gallery3} className="img-fluid" />
+              <Image alt="" height={400} width={400} src={gallery3} className="img-fluid" />
             </div>
           </div>
 
           <div className="col-lg-4 col-md-6 portfolio-item filter-card">
             <div className="portfolio-wrap" data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-delay="100">
-              <Image alt="" fill src={gallery4} className="img-fluid" />
+              <Image alt="" height={400} width={400} src={gallery4} className="img-fluid" />
             </div>
           </div>
 
           <div className="col-lg-4 col-md-6 portfolio-item filter-web">
             <div className="portfolio-wrap" data-aos="zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="100">
-              <Image alt="" fill src={gallery5} className="img-fluid" />
+              <Image alt="" height={400} width={400} src={gallery5} className="img-fluid" />
             </div>
           </div>
 
           <div className="col-lg-4 col-md-6 portfolio-item filter-app">
             <div className="portfolio-wrap" data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-delay="100">
-              <Image alt="" fill src={gallery6} className="img-fluid" />
+              <Image alt="" height={400} width={400} src={gallery6} className="img-fluid" />
             </div>
           </div>
-    
        </div>
    </div>
 </section>
@@ -195,40 +194,39 @@ export const Home = () => {
     <div className="row portfolio-container">
       <div className="col-lg-4 col-md-6 portfolio-item filter-app">
         <div className="portfolio-wrap" data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-delay="100">
-          <Image alt="" fill src={news1} className="img-fluid" />
+          <Image alt="" height={400} width={400} src={news1} className="img-fluid" />
         </div>
       </div>
 
       <div className="col-lg-4 col-md-6 portfolio-item filter-web">
         <div className="portfolio-wrap" data-aos="zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="100">
-          <Image alt="" fill src={news2} className="img-fluid" />
+          <Image alt="" height={400} width={400} src={news2} className="img-fluid" />
         </div>
       </div>
 
       <div className="col-lg-4 col-md-6 portfolio-item filter-app">
         <div className="portfolio-wrap" data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-delay="100">
-          <Image alt="" fill src={news3} className="img-fluid" />
+          <Image alt="" height={400} width={400} src={news3} className="img-fluid" />
         </div>
       </div>
 
       <div className="col-lg-4 col-md-6 portfolio-item filter-card">
         <div className="portfolio-wrap" data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-delay="100">
-          <Image alt="" fill src={news4} className="img-fluid" />
+          <Image alt="" height={400} width={400} src={news4} className="img-fluid" />
         </div>
       </div>
 
       <div className="col-lg-4 col-md-6 portfolio-item filter-web">
         <div className="portfolio-wrap" data-aos="zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="100">
-          <Image alt="" fill src={news5} className="img-fluid" />
+          <Image alt="" height={400} width={400} src={news5} className="img-fluid" />
         </div>
       </div>
 
       <div className="col-lg-4 col-md-6 portfolio-item filter-app">
         <div className="portfolio-wrap" data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-delay="100">
-          <Image alt="" fill src={news6} className="img-fluid" />
+          <Image alt="" height={400} width={400} src={news6} className="img-fluid" />
         </div>
       </div>
-
    </div>
 </div>
 </section>
@@ -241,7 +239,7 @@ export const Home = () => {
 		     <div className="row1">
 		        <div className="col" data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-delay="100">
 				   <div className="testimonial" style={{"padding-bottom": "32px"}}>
-					 <Image alt="" fill src={girl} />
+					 <Image alt="" height={400} width={400} src={girl} />
 					 <div className="name">Shilpi Gupta</div>
 					   <div className="stars">
 					     <i className="fas fa-star"></i>
@@ -256,7 +254,7 @@ export const Home = () => {
 				 
 				 <div className="col" data-aos="zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="100">
 				   <div className="testimonial">
-            <Image alt="" fill src={girl} />
+            <Image alt="" height={400} width={400} src={girl} />
 					 <div className="name">Akshita Babutta</div>
 					   <div className="stars">
 					     <i className="fas fa-star"></i>
@@ -271,7 +269,7 @@ export const Home = () => {
 				 
 				 <div className="col" data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-delay="100">
 				   <div className="testimonial">
-            <Image alt="" fill src={boy} />
+            <Image alt="" height={400} width={400} src={boy} />
 					 <div className="name">Bineet Singh</div>
 					   <div className="stars">
 					     <i className="fas fa-star"></i>
@@ -286,7 +284,7 @@ export const Home = () => {
 				 
 				 <div className="col" data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-delay="100">
 				   <div className="testimonial">
-            <Image alt="" fill src={girl} />
+            <Image alt="" height={400} width={400} src={girl} />
 					 <div className="name">Khushi Atolia</div>
 					   <div className="stars">
 					     <i className="fas fa-star"></i>
@@ -301,7 +299,7 @@ export const Home = () => {
 				 
 				 <div className="col" data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-delay="100">
 				   <div className="testimonial">
-            <Image alt="" fill src={boy} />
+            <Image alt="" height={400} width={400} src={boy} />
 					 <div className="name">Devesh Mittal</div>
 					   <div className="stars">
 						 <i className="fas fa-star"></i>
@@ -316,7 +314,7 @@ export const Home = () => {
 
           <div className="col" data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-delay="100">
             <div className="testimonial">
-              <Image alt="" fill src={boy} />
+              <Image alt="" height={400} width={400} src={boy} />
             <div className="name">Naryan Jain</div>
               <div className="stars">
               <i className="fas fa-star"></i>
