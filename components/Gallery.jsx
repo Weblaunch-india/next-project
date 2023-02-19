@@ -1,14 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
-import Gallery1 from "../bootstrap/images/gallery/1.jpeg";
-import Gallery2 from "../bootstrap/images/gallery/2.jpeg";
-import Gallery3 from "../bootstrap/images/gallery/3.jpeg";
-import Gallery4 from "../bootstrap/images/gallery/4.jpeg";
-import Gallery5 from "../bootstrap/images/gallery/5.jpg";
-import Gallery6 from "../bootstrap/images/gallery/6.jpg";
-import Gallery7 from "../bootstrap/images/gallery/7.jpg";
-import Gallery8 from "../bootstrap/images/gallery/8.jpg";
-import $ from "jquery";
 import Link from "next/link";
 import { getImages } from "../functions/db";
 import { useAuthState } from "react-firebase-hooks/auth";

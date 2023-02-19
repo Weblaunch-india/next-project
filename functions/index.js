@@ -4,6 +4,7 @@ import {
 	getAuth,
 	onAuthStateChanged,
 	signInWithEmailAndPassword,
+	signOut,
 } from "firebase/auth";
 import { useState } from "react";
 import Router from "next/router";
@@ -55,12 +56,15 @@ export function InitiateLogin(e, email, password, setAuth , setError) {
 // 	}
 // });
 
-// signOut(auth)
-// 	.then(() => {
-// 		// Sign-out successful.
-// 		window.location.href = "/admin.html";
-// 	})
-// 	.catch((error) => {
-// 		// An error happened.
-// 		alert("Some error occured, please refresh");
-// 	});
+export const Logout = () => {
+
+	signOut(auth)
+	.then(() => {
+		// Sign-out successful.
+		window.location.href = "/";
+	})
+	.catch((error) => {
+		// An error happened.
+		alert("Some error occured, please refresh");
+	});
+}
