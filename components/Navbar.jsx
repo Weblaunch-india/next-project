@@ -1,13 +1,17 @@
-import React from 'react';
-import logo from "../bootstrap/images/PNG.png"
-import Image from 'next/image';
+import React from "react";
+import logo from "../bootstrap/images/PNG.png";
+import Image from "next/image";
 import Head from "next/head";
-import Link from 'next/link';
+import Link from "next/link";
+import { Logout, auth } from "../functions";
+import { useAuthState } from "react-firebase-hooks/auth";
 
 export const Navbar = () => {
-  return (
-    <>
-    <Head>
+	const [user, loading] = useAuthState(auth);
+
+	return (
+		<>
+			<Head>
 				<title>Create Next App</title>
 				<meta
 					name="description"
@@ -36,42 +40,112 @@ export const Navbar = () => {
 					rel="stylesheet"
 				/>
 			</Head>
-    <div className="container-fluid menu">
-        <nav className="navbar navbar-expand-lg my-navbar">
-            <Link className="navbar-brand " href="/"><Image src={logo} height="100" width='150' alt="" loading="lazy" /></Link>
-            <button className="navbar-toggler custom-toggler" type="button" data-toggle="collapse"
-                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-            </button>
+			<div className="container-fluid menu">
+				<nav className="navbar navbar-expand-lg my-navbar">
+					<Link
+						className="navbar-brand "
+						href="/"
+					>
+						<Image
+							src={logo}
+							height="100"
+							width="150"
+							alt=""
+							loading="lazy"
+						/>
+					</Link>
+					<button
+						className="navbar-toggler custom-toggler"
+						type="button"
+						data-toggle="collapse"
+						data-target="#navbarSupportedContent"
+						aria-controls="navbarSupportedContent"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span className="navbar-toggler-icon"></span>
+					</button>
 
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul className="navbar-nav ml-auto">
-                    <li className="nav-item">
-                        <Link className="nav-link" href='/'>Home</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link" href="/about">About us</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link href="/events" className="nav-link">Events</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link href="/gallery" className="nav-link">Gallery</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link href="/donate" className="nav-link">Donate</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link href="/volunteer" className="nav-link">Volunteer</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link href="/contact" className="nav-link">Contact Us</Link>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-</div>
-</>
-  )
-}
+					<div
+						className="collapse navbar-collapse"
+						id="navbarSupportedContent"
+					>
+						<ul className="navbar-nav ml-auto">
+							<li className="nav-item">
+								<Link
+									className="nav-link"
+									href="/"
+								>
+									Home
+								</Link>
+							</li>
+							<li className="nav-item">
+								<Link
+									className="nav-link"
+									href="/about"
+								>
+									About us
+								</Link>
+							</li>
+							<li className="nav-item">
+								<Link
+									href="/events"
+									className="nav-link"
+								>
+									Events
+								</Link>
+							</li>
+							<li className="nav-item">
+								<Link
+									href="/gallery"
+									className="nav-link"
+								>
+									Gallery
+								</Link>
+							</li>
+							<li className="nav-item">
+								<Link
+									href="/donate"
+									className="nav-link"
+								>
+									Donate
+								</Link>
+							</li>
+							<li className="nav-item">
+								<Link
+									href="/volunteer"
+									className="nav-link"
+								>
+									Volunteer
+								</Link>
+							</li>
+							<li className="nav-item">
+								<Link
+									href="/contact"
+									className="nav-link"
+								>
+									Contact
+									Us
+								</Link>
+							</li>
+							{user ? (
+								<li className="nav-item">
+									<button
+										onClick={() =>
+											Logout()
+										}
+										className="nav-link"
+									>
+										Logout
+									</button>
+								</li>
+							) : (
+								<></>
+							)}
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</>
+	);
+};
