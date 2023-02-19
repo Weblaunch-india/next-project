@@ -9,4 +9,4 @@ const ImagesEdit = () => {
   )
 }
 
-export default ImagesEdit
+export default ImagesEdit;
