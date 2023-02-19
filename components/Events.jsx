@@ -72,10 +72,10 @@ export const Events = () => {
 					<h2>Career Guidance for Children</h2>
 					<h4>
 						<b>
-							<a href="#">
+							<Link href="#">
 								Spoorthy inspire
 								program
-							</a>
+							</Link>
 						</b>
 					</h4>
 					<p className="font-italic">

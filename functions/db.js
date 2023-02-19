@@ -121,3 +121,43 @@ export async function getEvents(setEvents) {
 	});
 	return result;
 }
+
+//
+
+
+export async function createImage(e, title, subtitle, description, url) {
+	// Create a root reference
+
+	const docRef = await addDoc(collection(db, "events"), {
+		title: "asdadas",
+		subtitle: "asdads",
+		description: "Swqwdasq",
+		image: url,
+	});
+
+	console.log("Document written with ID: ", docRef.id);
+}
+
+export async function updateImage(id, fields) {
+	const docRef = doc(db, "events", id);
+
+	await updateDoc(docRef, fields);
+}
+
+export async function deleteImage(id) {
+	// import { doc, deleteDoc } from "firebase/firestore";
+
+	await deleteDoc(doc(db, "gallery", id));
+	console.log("deleted bro");
+}
+
+export async function getImages(setEvents) {
+	const querySnapshot = await getDocs(collection(db, "gallery"));
+
+	const result = querySnapshot.forEach((doc) => {
+		// doc.data() is never undefined for query doc snapshots
+		console.log(doc.data());
+		setEvents((prev) => [...prev, { id: doc.id, ...doc.data() }]);
+	});
+	return result;
+}
