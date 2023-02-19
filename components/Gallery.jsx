@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { getImages } from "../functions/db";
+import { getImages, deleteImage } from "../functions/db";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../functions";
+
 
 export const Gallery = () => {
 	const styling = {
@@ -43,7 +44,7 @@ export const Gallery = () => {
 						<div className="admin-section">
 							<Link
 								className="btn btn-primary admin-button"
-								href="{{ url_for('add_gallery_image') }}"
+								href="/add_gallery"
 								role="button"
 							>
 								Add image
@@ -69,6 +70,11 @@ export const Gallery = () => {
 										}
 										className="img-fluid"
 									/>
+									{user?(
+										<div className="portfolio-info">
+                                    <button className="btn btn-primary" onClick={()=>deleteImage(elem.id)}>Delete</button>
+                                </div>
+									):<></>}
 								</div>
 							</div>)
 						})}

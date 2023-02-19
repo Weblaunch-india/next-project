@@ -1,12 +1,12 @@
 import React from 'react'
-import { AddGallery } from '../components/AddGallery';
+import AddGallery from '../components/AddGallery'
 
-const Gallery = () => {
+const ImagesEdit = () => {
   return (
-    <div>
+    <div >
         <AddGallery />
     </div>
   )
 }
 
-export default Gallery;
+export default ImagesEdit;
