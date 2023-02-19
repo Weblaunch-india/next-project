@@ -42,9 +42,9 @@ const GalleryEdit = () => {
 			//     }
 			//   </style>
 
-			<section class="section-bg services">
-				<div class="form-section">
-					<div class="section-title">
+			<section className="section-bg services">
+				<div className="form-section">
+					<div className="section-title">
 						<h2>Image details</h2>
 					</div>
 					<form
@@ -52,13 +52,13 @@ const GalleryEdit = () => {
 						method="post"
 						enctype="multipart/form-data"
 					>
-						<div class="form-group">
+						<div className="form-group">
 							<label for="image">
 								Image
 							</label>
 							<input
 								type="file"
-								class="form-control"
+								className="form-control"
 								id="image"
 								name="image"
 								accept="image/x-png,image/gif,image/jpeg,image/jpg,image/png"
@@ -66,7 +66,7 @@ const GalleryEdit = () => {
 						</div>
 						<button
 							type="submit"
-							class="btn btn-primary"
+							className="btn btn-primary"
 						>
 							Submit
 						</button>

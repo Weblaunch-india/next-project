@@ -33,8 +33,8 @@ export const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 // Create a root reference
 
-export function uploadImage(file, title, setURL) {
-	const storageRef = ref(storage, `events/${title}`);
+export function uploadImage(file, title, setURL, folder) {
+	const storageRef = ref(storage, `${folder}/${title}`);
 
 	const uploadTask = uploadBytesResumable(storageRef, file);
 	// Register three observers:
@@ -73,7 +73,7 @@ export function uploadImage(file, title, setURL) {
 						"File available at",
 						downloadURL
 					);
-
+					
 					setURL(downloadURL);
 				}
 			);
@@ -113,6 +113,36 @@ export async function deleteEvent(id) {
 
 export async function getEvents(setEvents) {
 	const querySnapshot = await getDocs(collection(db, "events"));
+
+	const result = querySnapshot.forEach((doc) => {
+		// doc.data() is never undefined for query doc snapshots
+		console.log(doc.data());
+		setEvents((prev) => [...prev, { id: doc.id, ...doc.data() }]);
+	});
+	return result;
+}
+
+//
+
+export async function createImage(e, url) {
+	// Create a root reference
+
+	const docRef = await addDoc(collection(db, "gallery"), {
+		image: url,
+	});
+
+	console.log("Document written with ID: ", docRef.id);
+}
+
+export async function deleteImage(id) {
+	// import { doc, deleteDoc } from "firebase/firestore";
+
+	await deleteDoc(doc(db, "gallery", id));
+	console.log("deleted bro");
+}
+
+export async function getImages(setEvents) {
+	const querySnapshot = await getDocs(collection(db, "gallery"));
 
 	const result = querySnapshot.forEach((doc) => {
 		// doc.data() is never undefined for query doc snapshots
