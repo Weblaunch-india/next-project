@@ -95,92 +95,96 @@ export const Events = () => {
 
 			{/* <!-- Event 2 --> */}
 
-			<div>
-				{Events.map((elem) => {
-					return (
-						<>
-							<div className="row justify-content-start">
-								<div
-									className="col-md-5"
-									data-aos="fade-up"
-									data-aos-anchor-placement="center-bottom"
-								>
-									<img
-										src={
-											elem.image
-										}
-										className="img-fluid"
-										alt="EVENT IMAGE"
-									/>
-								</div>
-								<div
-									className="col-md-7 pt-4"
-									data-aos="fade-left"
-								>
-									<h2>
-										{
-											elem.title
-										}
-									</h2>
-									<h4>
-										<b>
-											<a href="#">
-												{
-													elem.subtitle
-												}
-											</a>
-										</b>
-									</h4>
-									<p className="font-italic">
-										{
-											elem.description
-										}
-									</p>
-									{user ? (
-										<div>
-											{" "}
-											<Link
-												class="btn btn-primary"
-												// href={
-												// 	"update-events/" +
-												// 	elem.id
-												// }
-												href={{
-													pathname: "/update-event",
-													query: {
-														id: elem.id,
-													},
-												}}
-												role="button"
-											>
-												Update
-											</Link>
-											<button
-												class="btn btn-primary"
-												onClick={(
-													e
-												) =>
-													deleteEvent(
-														elem.id
-													)
-												}
-												role="button"
-											>
-												Delete
-											</button>
-										</div>
-									) : (
-										<>
+			{(Events.length > 1) ? (
+				<div>
+					{Events.map((elem) => {
+						return (
+							<>
+								<div className="row justify-content-start">
+									<div
+										className="col-md-5"
+										data-aos="fade-up"
+										data-aos-anchor-placement="center-bottom"
+									>
+										<img
+											src={
+												elem.image
+											}
+											className="img-fluid"
+											alt="EVENT IMAGE"
+										/>
+									</div>
+									<div
+										className="col-md-7 pt-4"
+										data-aos="fade-left"
+									>
+										<h2>
+											{
+												elem.title
+											}
+										</h2>
+										<h4>
+											<b>
+												<a href="#">
+													{
+														elem.subtitle
+													}
+												</a>
+											</b>
+										</h4>
+										<p className="font-italic">
+											{
+												elem.description
+											}
+										</p>
+										{user ? (
+											<div>
+												{" "}
+												<Link
+													class="btn btn-primary"
+													// href={
+													// 	"update-events/" +
+													// 	elem.id
+													// }
+													href={{
+														pathname: "/update-event",
+														query: {
+															id: elem.id,
+														},
+													}}
+													role="button"
+												>
+													Update
+												</Link>
+												<button
+													class="btn btn-primary"
+													onClick={(
+														e
+													) =>
+														deleteEvent(
+															elem.id
+														)
+													}
+													role="button"
+												>
+													Delete
+												</button>
+											</div>
+										) : (
+											<>
 
-										</>
-									)}
+											</>
+										)}
+									</div>
 								</div>
-							</div>
-							<hr />
-						</>
-					);
-				})}
-			</div>
+								<hr />
+							</>
+						);
+					})}
+				</div>
+			) : (
+				<></>
+			)}
 		</section>
 	);
 };
