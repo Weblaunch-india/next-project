@@ -42,31 +42,6 @@ export const Navbar = () => {
 					rel="stylesheet"
 				/>
 			</Head>
-			<div className="container-fluid menu">
-				<nav className="navbar navbar-expand-lg my-navbar">
-					<Link
-						className="navbar-brand "
-						href="/"
-					>
-						<Image
-							src={logo}
-							height="100"
-							width="150"
-							alt=""
-							loading="lazy"
-						/>
-					</Link>
-					<button
-						className="navbar-toggler custom-toggler"
-						type="button"
-						data-toggle="collapse"
-						data-target="#navbarSupportedContent"
-						aria-controls="navbarSupportedContent"
-						aria-expanded="false"
-						aria-label="Toggle navigation"
-					>
-						<span className="navbar-toggler-icon"></span>
-					</button>
             <Script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
   integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
   crossOrigin="anonymous" async></Script>
