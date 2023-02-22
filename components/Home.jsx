@@ -19,19 +19,60 @@ import news5 from '../bootstrap/images/News/5.jpeg'
 import news6 from '../bootstrap/images/News/6.jpeg'
 import girl from '../bootstrap/images/testimonial-images/girl.png'
 import boy from '../bootstrap/images/testimonial-images/boy.jpg'
+import team_mem_1 from '../bootstrap/images/team/Yadaiah.jpg'
+import team_mem_2 from '../bootstrap/images/team/padmarao.jpg'
+import team_mem_3 from '../bootstrap/images/team/K.Sathyanarayana.jpg'
+import team_mem_4 from '../bootstrap/images/team/K.Saroja.jpg'
+import team_mem_5 from '../bootstrap/images/team/B.venkatesham.jpg'
 
 
 export const Home = () => {
+  const headingStyle = {
+    "font-size": "15px",
+  }
   return (
     <div className="">
 			
-			<div id="header">
+			{/* <div id="header">
 	  <div className="container text-center">
 		<div className="header-box">
 			<h1><span>S</span>poorthy <span>O</span>rganization</h1>
 		</div>
 	 </div>
+</div> */}
+<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel" data-aos="fade-up">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active caption-cor"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="1" class="caption-cor"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="2" class="caption-cor"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active cor-animation">
+      <div class="cor-block-1">
+        <div class="header-box">
+          <h1><span>S</span>poorthy <span>O</span>rganization</h1>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item cor-animation">
+      <div class="cor-block-2">
+      </div>
+    </div>
+    <div class="carousel-item cor-animation">
+      <div class="cor-block-3">              
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
 </div>
+
 {/* <!---------------------------------------- jumbotron ----------------------------------------> */}
 <div className="container-fluid" >
 <div className="row jumbotron" style={{"margin": 0}}>
@@ -99,6 +140,88 @@ export const Home = () => {
         </div>
 	 </div>
  </section>
+
+
+{/* About US */}
+<section className="bg-light" style={{"padding-bottom": "3px","padding-top": "1px"}}>
+  <div className="about text-center">
+      <h2 className="mb-5">Our Team<hr className="green-hr" /></h2>
+  </div>
+  <div className="container-fluid row team-row" style={{"text-align": "center"}} id="team" data-flickity='{ "wrapAround": true ,"autoPlay": 1500 }'>
+      {/* <!--Kuwarjeet singh card--> */}
+      <div className="carousel-cell about-carousel-cell" data-aos="zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="100">
+          <div className="container-fluid">
+              <div className="">
+                <div className="">
+                  <Image src={team_mem_1} alt="Kuwarjeet Singh" className="img-fluid team-pic" width="300" height="350" />
+                  <h4 className="about-name">K.Yadaiah</h4>
+                  <h6 style={headingStyle}>President</h6>
+                </div>
+             </div>
+          </div>
+      </div>
+      {/* <!--Harman arora card--> */}
+      <div className="carousel-cell about-carousel-cell" data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-delay="100">
+          <div className="container-fluid">
+              <div className="">
+                <div className="">
+                  <Image src={team_mem_2} className="img-fluid team-pic" alt="Harman arora" width="300" height="350" />
+                  <h4 className="about-name">Padma Rao Mekala</h4>
+                  <h6  style={headingStyle}>Vice President</h6>
+                </div>
+              </div>
+            </div>
+      </div>
+
+      {/* <!--Avleen kaur card--> */}
+      <div className="carousel-cell about-carousel-cell" data-aos="zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="100">
+        <div className="container-fluid">
+            <div className="">
+              <div className="">
+                <Image src={team_mem_3} className="img-fluid team-pic" alt="Avleen Kaur" width="300" height="350" />
+                <h4 className="about-name">Sathyanarayana Kandi</h4>
+                <h6  style={headingStyle}>General Secretary</h6>
+              </div>
+            </div>
+          </div>
+    </div>
+
+      {/* <!--Yashvi parvani card--> */}
+      <div className="carousel-cell about-carousel-cell" data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-delay="100">
+          <div className="container-fluid">
+              <div className="">
+                <div className="">
+                  <Image src={team_mem_4} className="img-fluid team-pic" alt="Yashvi parwani" width="300" height="350" />
+                  <h4 className="about-name">Sarojana Kuntolla</h4>
+                  <h6  style={headingStyle}>Treasurer</h6>
+                </div>
+              </div>
+            </div>
+      </div>
+      
+      {/* <!--Bineet singh card--> */}
+      <div className="carousel-cell about-carousel-cell" data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-delay="100">
+          <div className="container-fluid">
+              <div className="">
+                <div className="">
+                  <Image src={team_mem_5} className="img-fluid team-pic" alt="Bineet Singh" width="300" height="350" />
+                  <h4 className="about-name">Venkatesham Battula</h4>
+                  <h6  style={headingStyle}>Joint Secretary</h6>
+                </div>
+              </div>
+            </div>
+      </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
 {/* <!------------------- EDUCATION @TRPWS SECTION ---------------------------> */}
 <section id="portfolio" className="portfolio">
       <div className="container" >
