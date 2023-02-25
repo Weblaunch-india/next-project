@@ -78,7 +78,7 @@ export const Home = () => {
 </div>
 
 {/* <!---------------------------------------- jumbotron ----------------------------------------> */}
-<div className="container-fluid" >
+<div  className="container-fluid" >
 <div className="row jumbotron" style={{"margin": 0}}>
     <div className="col-xs-20 col-sm-12 col-md-20 col-lg-20 col-xl-100" >
         <h1 className="text-center" data-aos="zoom-in-up" data-aos-easing="ease-in-sine" data-aos-delay="100">WHO WE ARE AND WHAT DO WE DO?</h1>
