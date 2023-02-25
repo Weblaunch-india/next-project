@@ -24,6 +24,8 @@ import team_mem_2 from '../bootstrap/images/team/padmarao.jpg'
 import team_mem_3 from '../bootstrap/images/team/K.Sathyanarayana.jpg'
 import team_mem_4 from '../bootstrap/images/team/K.Saroja.jpg'
 import team_mem_5 from '../bootstrap/images/team/B.venkatesham.jpg'
+import car2 from '../bootstrap/images/home_images/2-1.jpg'
+import car3 from '../bootstrap/images/home_images/1-3.jpg'
 
 
 export const Home = () => {
@@ -48,7 +50,7 @@ export const Home = () => {
   </ol>
   <div className="carousel-inner">
     <div className="carousel-item active cor-animation">
-      <div className="cor-block-1" >
+      <div className="cor-block-1" style={{"backgroundImage":"../bootstrap/images/main.jpeg"}} >
         <div className="header-box">
           <h1><span>S</span>poorthy <span>O</span>rganization</h1>
         </div>
@@ -56,10 +58,12 @@ export const Home = () => {
     </div>
     <div className="carousel-item cor-animation">
       <div className="cor-block-2">
+       <Image src={car2} fill alt=''/>
       </div>
     </div>
     <div className="carousel-item cor-animation">
-      <div className="cor-block-3">              
+      <div className="cor-block-3">   
+      <Image src={car3} fill alt=''/>           
       </div>
     </div>
   </div>
