@@ -40,41 +40,41 @@ export const Home = () => {
 		</div>
 	 </div>
 </div> */}
-<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel" data-aos="fade-up">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active caption-cor"></li>
-    <li data-target="#carouselExampleCaptions" data-slide-to="1" class="caption-cor"></li>
-    <li data-target="#carouselExampleCaptions" data-slide-to="2" class="caption-cor"></li>
+<div id="carouselExampleCaptions" className="carousel slide" data-ride="carousel" data-aos="fade-up">
+  <ol className="carousel-indicators">
+    <li data-target="#carouselExampleCaptions" data-slide-to="0" className="active caption-cor"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="1" className="caption-cor"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="2" className="caption-cor"></li>
   </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active cor-animation">
-      <div class="cor-block-1">
-        <div class="header-box">
+  <div className="carousel-inner">
+    <div className="carousel-item active cor-animation">
+      <div className="cor-block-1">
+        <div className="header-box">
           <h1><span>S</span>poorthy <span>O</span>rganization</h1>
         </div>
       </div>
     </div>
-    <div class="carousel-item cor-animation">
-      <div class="cor-block-2">
+    <div className="carousel-item cor-animation">
+      <div className="cor-block-2">
       </div>
     </div>
-    <div class="carousel-item cor-animation">
-      <div class="cor-block-3">              
+    <div className="carousel-item cor-animation">
+      <div className="cor-block-3">              
       </div>
     </div>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
+  <a className="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span className="sr-only">Previous</span>
   </a>
-  <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
+  <a className="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+    <span className="sr-only">Next</span>
   </a>
 </div>
 
 {/* <!---------------------------------------- jumbotron ----------------------------------------> */}
-<div className="container-fluid" >
+<div  className="container-fluid" >
 <div className="row jumbotron" style={{"margin": 0}}>
     <div className="col-xs-20 col-sm-12 col-md-20 col-lg-20 col-xl-100" >
         <h1 className="text-center" data-aos="zoom-in-up" data-aos-easing="ease-in-sine" data-aos-delay="100">WHO WE ARE AND WHAT DO WE DO?</h1>
