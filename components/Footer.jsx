@@ -44,7 +44,7 @@ const Footer = () => {
                       className="bx bxl-facebook"></i></Link>
               <Link href="https://www.instagram.com/spoorthyorg/" className="instagram" target="_blank"><i
                       className="bx bxl-instagram"></i></Link>
-              <Link href="#" className="google-plus"
+              <Link href="https://www.youtube.com/channel/UC1A0KTzU64i1sZpCGAHNs-g" className="google-plus"
                   target="_blank"><i className="bx bxl-youtube"></i></Link>
           </div>
       </div>
