@@ -22,12 +22,6 @@ export const Gallery = () => {
 
 	return (
 		<div>
-			{/* <style>
-    .portfolio {
-        padding-top: 60px;
-    }
-</style> */}
-
 			<section
 				id="portfolio"
 				className="portfolio"
@@ -52,9 +46,10 @@ export const Gallery = () => {
 					) : (
 						<></>
 					)}
+
 					<div className="row portfolio-container">
 						{Images.length > 2 ? (
-							Images.split(1).map(
+							Images.slice(2, Images.length).map(
 								(elem) => {
 									return (
 										<div
@@ -85,11 +80,6 @@ export const Gallery = () => {
 						) : (
 							<></>
 						)}
-						{/* <div className="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div className="portfolio-wrap" data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-delay="100">
-                    <Image fill alt='' src={Gallery9} className="img-fluid" />
-                        </div>
-                    </div> */}
 					</div>
 				</div>
 			</section>
