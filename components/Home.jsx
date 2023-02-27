@@ -26,6 +26,7 @@ import team_mem_4 from '../bootstrap/images/team/K.Saroja.jpg'
 import team_mem_5 from '../bootstrap/images/team/B.venkatesham.jpg'
 import car2 from '../bootstrap/images/home_images/2-1.jpg'
 import car3 from '../bootstrap/images/home_images/1-3.jpg'
+import Carousal from './Carousal';
 
 
 export const Home = () => {
@@ -42,7 +43,7 @@ export const Home = () => {
 		</div>
 	 </div>
 </div> */}
-<div id="carouselExampleCaptions" className="carousel slide" data-ride="carousel" data-aos="fade-up">
+{/* <div id="carouselExampleCaptions" className="carousel slide" data-ride="carousel" data-aos="fade-up">
   <ol className="carousel-indicators">
     <li data-target="#carouselExampleCaptions" data-slide-to="0" className="active caption-cor"></li>
     <li data-target="#carouselExampleCaptions" data-slide-to="1" className="caption-cor"></li>
@@ -75,8 +76,11 @@ export const Home = () => {
     <span className="carousel-control-next-icon" aria-hidden="true"></span>
     <span className="sr-only">Next</span>
   </a>
-</div>
+</div> */}
 
+      {/* Recent Update  */}
+      <Carousal />
+      
 {/* <!---------------------------------------- jumbotron ----------------------------------------> */}
 <div  className="container-fluid" >
 <div className="row jumbotron" style={{"margin": 0}}>

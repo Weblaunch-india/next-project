@@ -1,0 +1,109 @@
+.carousalContainer {
+	width: 95vw;
+	margin-left: 2.5vw;
+	display: flex;
+	height: 90vh;
+	align-items: center;
+	position: relative;
+	margin-bottom: 4rem;
+	margin-top: 4rem;
+	border-radius: 1rem;
+}
+
+.show {
+	margin-top: 1rem;
+	width: 100%;
+	position: relative;
+	overflow-x: hidden;
+	height: 100%;
+}
+
+.hide {
+	visibility: hidden;
+}
+
+.right {
+	z-index: 10;
+}
+
+.left {
+	z-index: 10;
+}
+
+.element {
+	overflow-y: hidden;
+	overflow-x: hidden;
+	width: 100%;
+	height: 100%;
+}
+
+.image {
+	object-fit: cover;
+	width: 100%;
+	border-radius: 2rem;
+	height: 100%;
+	position: absolute;
+}
+
+.right {
+	opacity: 0.4;
+	position: absolute;
+	right: 0;
+	height: 4rem;
+	width: 40px;
+	font-size: xx-large;
+	outline: none;
+	border-radius: 0.5rem;
+	border: 0;
+}
+
+.overlayText {
+	z-index: 5;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-image: linear-gradient(
+		to bottom,
+		rgba(146, 146, 146, 0),
+		#303030
+	);
+	font-size: xx-large;
+	color: aliceblue;
+}
+
+.image1 {
+	background-image: linear-gradient(
+		to bottom,
+		rgba(245, 246, 252, 0.52),
+		rgba(117, 19, 93, 0.73)
+	);
+	/* url("https://raw.githubusercontent.com/Weblaunch-india/next-project/main/bootstrap/images/home_images/1-1.jpeg"); */
+
+	object-fit: cover;
+	width: 100%;
+	border-radius: 2rem;
+	height: 100%;
+	position: absolute;
+}
+
+.left {
+	opacity: 0.4;
+	width: 40px;
+	font-size: xx-large;
+	outline: none;
+	border: 0;
+	border-radius: 0.5rem;
+	height: 4rem;
+	position: absolute;
+}
+
+.right:hover {
+	opacity: 0.9;
+}
+
+.left:hover {
+	opacity: 0.9;
+}
