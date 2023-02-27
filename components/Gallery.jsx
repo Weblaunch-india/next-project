@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { getImages, deleteImage } from "../functions/db";
+import { getImages } from "../functions/db";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../functions";
-
 
 export const Gallery = () => {
 	const styling = {
@@ -13,7 +12,7 @@ export const Gallery = () => {
 	const [Images, setImages] = useState([]);
 
 	useEffect(() => {
-		setImages((prev) => [...prev, getImages(setImages)]);
+		getImages(setImages);
 		return () => {
 			setImages([]);
 		};
@@ -44,7 +43,7 @@ export const Gallery = () => {
 						<div className="admin-section">
 							<Link
 								className="btn btn-primary admin-button"
-								href="/add_gallery"
+								href="/gallery-edit"
 								role="button"
 							>
 								Add image
@@ -54,30 +53,38 @@ export const Gallery = () => {
 						<></>
 					)}
 					<div className="row portfolio-container">
-						{Images.map((elem) => {
-							return (<div key={elem.image} className="col-lg-4 col-md-6 portfolio-item filter-app">
-								<div
-									className="portfolio-wrap"
-									data-aos="fade-left"
-									data-aos-easing="ease-in-sine"
-									data-aos-delay="100"
-								>
-									<img
-										fill
-										alt=""
-										src={
-											elem.image
-										}
-										className="img-fluid"
-									/>
-									{user?(
-										<div className="portfolio-info">
-                                    <button className="btn btn-primary" onClick={()=>deleteImage(elem.id)}>Delete</button>
-                                </div>
-									):<></>}
-								</div>
-							</div>)
-						})}
+						{Images.length > 2 ? (
+							Images.split(1).map(
+								(elem) => {
+									return (
+										<div
+											key={
+												elem.image
+											}
+											className="col-lg-4 col-md-6 portfolio-item filter-app"
+										>
+											<div
+												className="portfolio-wrap"
+												data-aos="fade-left"
+												data-aos-easing="ease-in-sine"
+												data-aos-delay="100"
+											>
+												<img
+													fill
+													alt=""
+													src={
+														elem.image
+													}
+													className="img-fluid"
+												/>
+											</div>
+										</div>
+									);
+								}
+							)
+						) : (
+							<></>
+						)}
 						{/* <div className="col-lg-4 col-md-6 portfolio-item filter-app">
                 <div className="portfolio-wrap" data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-delay="100">
                     <Image fill alt='' src={Gallery9} className="img-fluid" />

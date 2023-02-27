@@ -73,7 +73,7 @@ export function uploadImage(file, title, setURL, folder) {
 						"File available at",
 						downloadURL
 					);
-					
+
 					setURL(downloadURL);
 				}
 			);
@@ -89,9 +89,9 @@ export async function createEvent(e, title, subtitle, description, url) {
 	// Create a root reference
 
 	const docRef = await addDoc(collection(db, "events"), {
-		title: "asdadas",
-		subtitle: "asdads",
-		description: "Swqwdasq",
+		title: `${title}`,
+		subtitle: `${subtitle}`,
+		description: `${description}`,
 		image: url,
 	});
 
@@ -151,3 +151,13 @@ export async function getImages(setEvents) {
 	});
 	return result;
 }
+
+// export async function getImages() {
+// 	const querySnapshot = await getDocs(collection(db, "gallery"));
+
+// 	const result = querySnapshot.forEach((doc) => {
+// 		// doc.data() is never undefined for query doc snapshots
+// 		console.log(doc.data());
+// 	});
+// 	return result;
+// }

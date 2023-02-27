@@ -1,13 +1,18 @@
-import React from 'react'
-import { Navbar } from '../components/Navbar'
-import { Events } from '../components/Events'
+import React from "react";
+import { Navbar } from "../components/Navbar";
+import { Events } from "../components/Events";
+import { QueryClient, QueryClientProvider } from "react-query";
+
+const queryClient = new QueryClient();
 
 const events = () => {
-  return (
-    <div>
-        <Events />
-    </div>
-  )
-}
+	return (
+		<QueryClientProvider client={queryClient}>
+			<div>
+				<Events />
+			</div>
+		</QueryClientProvider>
+	);
+};
 
 export default events;
