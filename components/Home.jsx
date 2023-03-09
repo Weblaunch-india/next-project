@@ -149,88 +149,8 @@ export const Home = () => {
 	 </div>
  </section>
 
-
-{/* About US */}
-<section className="bg-light" style={{"padding-bottom": "3px","padding-top": "1px"}}>
-  <div className="about text-center">
-      <h2 className="mb-5">Our Team<hr className="green-hr" /></h2>
-  </div>
-  <div className="container-fluid row team-row" style={{"text-align": "center"}} id="team" data-flickity='{ "wrapAround": true ,"autoPlay": 1500 }'>
-      {/* <!--Kuwarjeet singh card--> */}
-      <div className="carousel-cell about-carousel-cell" data-aos="zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="100">
-          <div className="container-fluid">
-              <div className="">
-                <div className="">
-                  <Image src={team_mem_1} alt="Kuwarjeet Singh" className="img-fluid team-pic" width="300" height="350" />
-                  <h4 className="about-name">K.Yadaiah</h4>
-                  <h6 style={headingStyle}>President</h6>
-                </div>
-             </div>
-          </div>
-      </div>
-      {/* <!--Harman arora card--> */}
-      <div className="carousel-cell about-carousel-cell" data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-delay="100">
-          <div className="container-fluid">
-              <div className="">
-                <div className="">
-                  <Image src={team_mem_2} className="img-fluid team-pic" alt="Harman arora" width="300" height="350" />
-                  <h4 className="about-name">Padma Rao Mekala</h4>
-                  <h6  style={headingStyle}>Vice President</h6>
-                </div>
-              </div>
-            </div>
-      </div>
-
-      {/* <!--Avleen kaur card--> */}
-      <div className="carousel-cell about-carousel-cell" data-aos="zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="100">
-        <div className="container-fluid">
-            <div className="">
-              <div className="">
-                <Image src={team_mem_3} className="img-fluid team-pic" alt="Avleen Kaur" width="300" height="350" />
-                <h4 className="about-name">Sathyanarayana Kandi</h4>
-                <h6  style={headingStyle}>General Secretary</h6>
-              </div>
-            </div>
-          </div>
-    </div>
-
-      {/* <!--Yashvi parvani card--> */}
-      <div className="carousel-cell about-carousel-cell" data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-delay="100">
-          <div className="container-fluid">
-              <div className="">
-                <div className="">
-                  <Image src={team_mem_4} className="img-fluid team-pic" alt="Yashvi parwani" width="300" height="350" />
-                  <h4 className="about-name">Sarojana Kuntolla</h4>
-                  <h6  style={headingStyle}>Treasurer</h6>
-                </div>
-              </div>
-            </div>
-      </div>
-      
-      {/* <!--Bineet singh card--> */}
-      <div className="carousel-cell about-carousel-cell" data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-delay="100">
-          <div className="container-fluid">
-              <div className="">
-                <div className="">
-                  <Image src={team_mem_5} className="img-fluid team-pic" alt="Bineet Singh" width="300" height="350" />
-                  <h4 className="about-name">Venkatesham Battula</h4>
-                  <h6  style={headingStyle}>Joint Secretary</h6>
-                </div>
-              </div>
-            </div>
-      </div>
-    </div>
-</section>
-
-
-
-
-
-
-
-
-
 {/* <!------------------- EDUCATION @TRPWS SECTION ---------------------------> */}
+
 <section id="portfolio" className="portfolio">
       <div className="container" >
          <div className="section-title">

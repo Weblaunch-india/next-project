@@ -22,7 +22,7 @@ function Carousal() {
 	return (
 		<div className={css.carousalContainer}>
 			<button
-				onClick={(e) => {
+				onClick={(e) => {	
 					const newActive = Active - 1;
 					setActive(
 						newActive < 0 ? 7 : newActive
