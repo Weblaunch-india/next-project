@@ -160,7 +160,7 @@ const About = () => {
                 <div className="">
                   <Image src={team_mem_1} alt="Kuwarjeet Singh" className="img-fluid team-pic" width="300" height="350" />
                   <h4 className="about-name">K.Yadaiah</h4>
-                  <h6 style={headingStyle}>President</h6>
+                  <h6 style={headingStyle}>President(Founder)</h6>
                 </div>
              </div>
           </div>
