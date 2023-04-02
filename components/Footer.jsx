@@ -31,7 +31,7 @@ const Footer = () => {
                       TELANGANA 501301<br />
                       </Link>
                       
-                      <strong>Phone:</strong> <Link href="tel:+919848205894" style={{"color": "#777777"}}>+91 8866395858</Link><br />
+                      <strong>Phone:</strong> <Link href="tel:+919848205894" style={{"color": "#777777"}}>+91 8866395858, +91 9533497259</Link><br />
                       
                       <strong>Email:</strong> <Link href="mailto:spoortyorganization1@gmail.com" style={{"color": "#777777"}}>spoortyorganization1@gmail.com</Link><br />
                   </p>

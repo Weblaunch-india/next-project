@@ -19,7 +19,7 @@ export const Contact = () => {
                     </div>
                     <div class="col pt-2">
                         <h4 class="contact-h4">Phone</h4>
-                        <p><a href="tel:+918800100021">+91 8866395858</a></p>
+                        <p><a href="tel:+918800100021">+91 8866395858, <br /> +91 9533497259</a></p>
                         <hr class="line" />
                     </div>
                     <div class="col pt-2">

@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import qrCode from "../bootstrap/images/donation_images/phon.jpg";
+import Link from "next/link";
 
 const Donate = () => {
 	return (
@@ -16,14 +17,14 @@ const Donate = () => {
 
 			{/* <!-- Donation content --> */}
 			<section
-				class="services"
+				className="services"
 				style={{ "padding-top": "60px" }}
 			>
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-4">
+				<div className="container">
+					<div className="row">
+						<div className="col-lg-4">
 							<div
-								class="section-title"
+								className="section-title"
 								data-aos="fade-right"
 							>
 								<h2>
@@ -32,7 +33,7 @@ const Donate = () => {
 							</div>
 						</div>
 						<div
-							class="col-lg-8 justify-content-center"
+							className="col-lg-8 justify-content-center"
 							data-aos="zoom-in"
 							data-aos-delay="100"
 						>
@@ -86,12 +87,12 @@ const Donate = () => {
 				</div>
 			</section>
 
-			<section class="services">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-4">
+			<section className="services">
+				<div className="container">
+					<div className="row">
+						<div className="col-lg-4">
 							<div
-								class="section-title"
+								className="section-title"
 								data-aos="fade-right"
 							>
 								<h2>
@@ -101,7 +102,7 @@ const Donate = () => {
 							</div>
 						</div>
 						<div
-							class="col-lg-8 justify-content-center"
+							className="col-lg-8 justify-content-center"
 							data-aos="zoom-in"
 							data-aos-delay="100"
 						>
@@ -155,12 +156,12 @@ const Donate = () => {
 				</div>
 			</section>
 
-			<section class="services">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-4">
+			<section className="services">
+				<div className="container">
+					<div className="row">
+						<div className="col-lg-4">
 							<div
-								class="section-title"
+								className="section-title"
 								data-aos="fade-right"
 							>
 								<h2>
@@ -171,7 +172,7 @@ const Donate = () => {
 							</div>
 						</div>
 						<div
-							class="col-lg-8 justify-content-center"
+							className="col-lg-8 justify-content-center"
 							data-aos="zoom-in"
 							data-aos-delay="100"
 						>
@@ -224,13 +225,13 @@ const Donate = () => {
   </style> */}
 
 			{/* <!--donation form text-->     */}
-			<section class="bg-light donation mx-auto">
-				<div class="container my-1 bg-white">
-					<h4 class=" text-center pt-4">
+			<section className="bg-light donation mx-auto">
+				<div className="container my-1 bg-white">
+					<h4 className=" text-center pt-4">
 						DONATION SECTION
-						<hr class="donation-green-hr" />
+						<hr className="donation-green-hr" />
 					</h4>
-					<h3 class="text-center my-4 p-4">
+					<h3 className="text-center my-4 p-4">
 						A/c no - 154921010000023
 						<br />
 						IFSC -UBIN0915491 <br />
@@ -239,13 +240,15 @@ const Donate = () => {
 						GHATKESAR
 						<br />
 						{/* <strong>+91 9177385674</strong> */}
-					</h3>
-					{/*             
-            <div class="col border-right pay-don" data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-delay="200">
-                <p style={{"text-decoration": "underline", "font-weight": "bold", "font-size": "larger"}} class="pay-img">Scan this to pay via PhonePe</p>
-                <Image src={qrCode} class="pr-5 pay-img" alt="paytm Qr code" width="450" height="300" />
-            </div> */}
+					</h3> 
+            <div className="col border-right pay-don" data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-delay="200">
+                <p style={{"text-decoration": "underline", "font-weight": "bold", "font-size": "larger"}} className="pay-img">Scan this to pay via PhonePe</p>
+                <Image src={qrCode} className="pr-5 pay-img" alt="paytm Qr code" width="450" height="300" />
+            </div>
 				</div>
+			<div className="text-center mt-5">
+				<Link href='https://api.whatsapp.com/send/?phone=919533497259&text&type=phone_number&app_absent=0' target="_blank" className="btn btn-primary">Contact US for donation</Link>
+			</div>
 			</section>
 		</div>
 	);
