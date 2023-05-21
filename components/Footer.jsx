@@ -40,12 +40,14 @@ const Footer = () => {
           <div className="social-links text-center text-md-right pt-3 pt-md-0">
               <Link href="#" className="twitter" target="_blank"><i
                       className="bx bxl-twitter"></i></Link>
-              <Link href="https://m.facebook.com/spoorthyorg" className="facebook" target="_blank"><i
+              <Link href="https://www.facebook.com/people/Spoorthy-Organization/100092730133690/?mibextid=ZbWKwL" className="facebook" target="_blank"><i
                       className="bx bxl-facebook"></i></Link>
               <Link href="https://www.instagram.com/spoorthyorg/" className="instagram" target="_blank"><i
                       className="bx bxl-instagram"></i></Link>
               <Link href="https://www.youtube.com/channel/UC1A0KTzU64i1sZpCGAHNs-g" className="google-plus"
                   target="_blank"><i className="bx bxl-youtube"></i></Link>
+              <Link href="https://t.me/spoorthyorg" className="twitter" target="_blank"><i
+                      className="bx bxl-telegram"></i></Link>
           </div>
       </div>
   </div>
